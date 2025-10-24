@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Wywiad Ogólny</title>
+<style>
+  body {
+    background-color: #87CEFA;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  form {
+    width: 90%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  fieldset {
+    border: 2px solid #000;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  legend {
+    font-weight: bold;
+  }
+  label {
+    display: block;
+    margin: 5px 0;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 60%;
+    padding: 5px;
+    margin-top: 3px;
+  }
+  .buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  button, input[type="submit"], input[type="reset"] {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #000;
+  }
+  .small-input {
+    width: 100px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Wywiad Ogólny</h1>
+
+<form action="mailto:gogelikgo@gmail.com" method="post" enctype="text/plain">
+
+  <fieldset>
+    <legend>Dane podstawowe</legend>
+    <label>Imię i nazwisko: <input type="text" name="imie" required></label>
+    <label>Adres e-mail: <input type="email" name="email" required></label>
+
+    <label>Wiek:</label>
+    <input type="radio" name="wiek" value="10-18"> 10–18
+    <input type="radio" name="wiek" value="19-30"> 19–30
+    <input type="radio" name="wiek" value="30+"> 30+
+  </fieldset>
+
+  <fieldset>
+    <legend>Samopoczucie</legend>
+    <label>Jak się czujesz?
+      <select name="samopoczucie">
+        <option>Dobrze</option>
+        <option>Bardzo dobrze</option>
+        <option>Fatalnie</option>
+        <option>Źle</option>
+        <option>Nie wiem</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Preferencje i opinie</legend>
+    <label>Czy popierasz system kaucyjny?</label>
+    <input type="radio" name="kupony" value="tak"> Tak
+    <input type="radio" name="kupony" value="nie"> Nie
+    <input type="radio" name="kupony" value="niepewna"> Nie pewien/a
+
+    <br><br>
+    <label>Wolisz kota czy psa?</label>
+    <input type="radio" name="zwierze" value="kot"> Kota
+    <input type="radio" name="zwierze" value="pies"> Psa
+
+    <br><br>
+    <label>Kiedy ostatnio byłeś na dowolnych wyborach?</label>
+    <input type="radio" name="zakupy" value="7dni"> 7 dni temu
+    <input type="radio" name="zakupy" value="14dni"> 4–14 dni temu
+    <input type="radio" name="zakupy" value="30dni"> 19–30 dni temu
+    <input type="radio" name="zakupy" value="powyzej30"> 30+ dni temu
+  </fieldset>
+
+  <fieldset>
+    <legend>Partie</legend>
+    <label>Którą partie popierasz?</label>
+    <select name="partia">
+      <option>Prawo i sprawiedliwość</option>
+      <option>Razem</option>
+      <option>Konfedracja</option>
+    </select>
+
+    <br><br>
+    <label>Czy jesteś szczęśliwy?</label>
+    <input type="radio" name="szczescie" value="tak"> Tak
+    <input type="radio" name="szczescie" value="nie"> Nie
+    <input type="radio" name="szczescie" value="niepewny"> Nie jestem pewien
+<input type="radio" name="szczescie" value="niepewny"> 50/50
+  </fieldset>
+
+  <fieldset>
+    <legend>wOS</legend>
+    <label>Ulubiony dział WOSU:</label>
+    <input type="radio" name="dzial" value="woss"> Potrzeby podstawowe
+    <input type="radio" name="dzial" value="wos"> Prawa czlowieka
+    <input type="radio" name="dzial" value="wosss"> Polityka globalna
+    <input type="radio" name="dzial" value="wossss"> Życie rodzine
+
+    <br><br>
+    <label>Ocena formularza od 1–10: <input type="range" min="0" max="10"></label>
+
+    <br><br>
+    <label>Opinia tekstowa:<br>
+    <textarea name="opinia" rows="3" cols="40" placeholder="Twoja opinia..."></textarea></label>
+
+    <br><br>
+    <label>Hasło użytkownika: <input type="password" name="haslo" maxlength="5" class="small-input" required></label>
+  </fieldset>
+
+  <div class="buttons">
+    <button type="button" onclick="window.location.href='index.html'">Strona główna</button>
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </div>
+
+</form>
+
+</body>
+</html>
